@@ -3,23 +3,36 @@ package model.vechicle;
 import enums.CarType;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import model.road.Waypoint;
 import utils.GetResourcePath;
+
+import java.util.ArrayList;
 
 public class Car extends Vehicle{
 
-    private boolean isRightLane;
     private CarType carType;
+    public ArrayList<Waypoint> carRoute;
 
-    public Car(boolean isRightLane, CarType carType)
+    public Car(boolean isDrivingLeftToRight, CarType carType)
     {
         imageView = new ImageView();
-        this.isRightLane=isRightLane;
+        this.isDrivingLeftToRight = isDrivingLeftToRight;
         this.carType =carType;
     }
 
-    public boolean getIsRightLine()
+    public void setCarRoute(ArrayList<Waypoint>carRoute)
     {
-        return isRightLane;
+        this.carRoute = carRoute;
+    }
+
+    public ArrayList<Waypoint> getCarRoute()
+    {
+        return carRoute;
+    }
+
+    public boolean getIsDrivingLeftToRight()
+    {
+        return isDrivingLeftToRight;
     }
 
     @Override

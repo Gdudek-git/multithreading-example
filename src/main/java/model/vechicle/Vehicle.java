@@ -6,6 +6,7 @@ public abstract class Vehicle {
 
     protected int speed=50;
     protected ImageView imageView;
+    protected boolean isDrivingLeftToRight;
 
     public int getSpeed()
     {
@@ -30,4 +31,5 @@ public abstract class Vehicle {
     {
         imageView.setPreserveRatio(false);
     }
+
 }

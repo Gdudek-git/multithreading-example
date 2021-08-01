@@ -7,23 +7,21 @@ public abstract class Road {
     protected double mapX;
     protected double mapY;
     protected double vehicleRotation;
-    protected static ArrayList<Waypoint> roadCoordinates;
+    protected ArrayList<Waypoint> route;
 
 
-    protected void mapTheRoadCurve(double newMapX,double newMapY,double newVehicleRotation,boolean vehicleShouldRotate)
+
+    protected void mapTheRoadCurve(double newMapX,double newMapY,double newVehicleRotation,boolean vehicleShouldRotate,ArrayList<Waypoint>carRoute)
     {
         for(int i=0;i<25;i++)
         {
             mapX+=newMapX;
             mapY+=newMapY;
             vehicleRotation+=newVehicleRotation;
-            roadCoordinates.add(new Waypoint(mapX,mapY,vehicleRotation,vehicleShouldRotate));
+            carRoute.add(new Waypoint(mapX,mapY,vehicleRotation,vehicleShouldRotate));
         }
     }
 
-    public ArrayList getRoadCoordinates()
-    {
-        return roadCoordinates;
-    }
+
 
 }
