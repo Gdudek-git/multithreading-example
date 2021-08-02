@@ -24,7 +24,7 @@ public final class RightLane extends Road {
     {
         mapX =-100;
         mapY = 224;
-        vehicleRotation = 0;
+        requiredVehicleRotation = 0;
         route = new ArrayList<>();
 
         mapTheRoad();
@@ -38,17 +38,17 @@ public final class RightLane extends Road {
         }
 
         super.mapTheRoadCurve(2.4,3.84,3.6,false, route);
-        vehicleRotation = -90;
-        route.add(new Waypoint(860,mapY,vehicleRotation,true));
+        requiredVehicleRotation = -90;
+        route.add(new Waypoint(860,mapY, requiredVehicleRotation,true));
         super.mapTheRoadCurve(-3.2,3.2,3.6,true, route);
 
         for(; mapX>=135; mapX-=5)
         {
-            route.add(new Waypoint(mapX,mapY,vehicleRotation,true));
+            route.add(new Waypoint(mapX,mapY, requiredVehicleRotation,true));
         }
 
         super.mapTheRoadCurve(-2.4,5.8,-3.6,true, route);
-        vehicleRotation = 90;
+        requiredVehicleRotation = 90;
         route.add(new Waypoint(mapX,mapY,90,false));
         super.mapTheRoadCurve(5.2,4.8,-3.6,false, route);
 

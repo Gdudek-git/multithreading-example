@@ -25,7 +25,7 @@ public final class LeftLane extends Road {
     {
         mapX =1220;
         mapY = 620;
-        vehicleRotation = 0;
+        requiredVehicleRotation = 0;
         route = new ArrayList<>();
 
         mapTheRoad();
@@ -39,24 +39,24 @@ public final class LeftLane extends Road {
         }
 
         super.mapTheRoadCurve(-2.6,-3.2,3.6,true, route);
-        vehicleRotation = -90;
-        route.add(new Waypoint(mapX,mapY,vehicleRotation,false));
+        requiredVehicleRotation = -90;
+        route.add(new Waypoint(mapX,mapY, requiredVehicleRotation,false));
         super.mapTheRoadCurve(1.6,-4.2,3.6,false, route);
-        vehicleRotation = 0;
+        requiredVehicleRotation = 0;
 
         for(;mapX<795;mapX+=5)
         {
-            route.add(new Waypoint(mapX,mapY,vehicleRotation,false));
+            route.add(new Waypoint(mapX,mapY, requiredVehicleRotation,false));
         }
 
         super.mapTheRoadCurve(5,-4.48,-3.6,false, route);
-        vehicleRotation = -90;
-        route.add(new Waypoint(mapX,mapY,vehicleRotation,false));
+        requiredVehicleRotation = 90;
+        route.add(new Waypoint(mapX,mapY, requiredVehicleRotation,true));
         super.mapTheRoadCurve(-3.4,-5.8,-3.6,true, route);
 
         for(;mapX>-120;mapX-=5)
         {
-            route.add(new Waypoint(mapX,mapY,vehicleRotation,false));
+            route.add(new Waypoint(mapX,mapY, requiredVehicleRotation,true));
         }
     }
 }
