@@ -14,6 +14,7 @@ public class TrainDriver extends Driver {
 
     public void drive()
     {
+        Platform.runLater(() -> vehicle.getImageView().setY(vehicle.getRoute().get(0).getMapY()));
         for(Waypoint waypoint:vehicle.getRoute())
         {
 

@@ -1,12 +1,16 @@
 package controller;
 
 
+import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.scene.layout.AnchorPane;
 import model.display.CarDisplayManager;
 import model.drivers.CarDriver;
+import model.drivers.TrainDriver;
 import model.spawner.CarSpawner;
+import model.spawner.TrainSpawner;
 import model.vechicle.Car;
+import model.vechicle.Train;
 import utils.AddVehicleImageToCorrectPane;
 
 
@@ -32,15 +36,11 @@ public class MapViewController {
         CarSpawner carSpawner = new CarSpawner();
         TrainSpawner trainSpawner = new TrainSpawner();
 
-        Runnable cars = () -> {
-            spawnCars(carSpawner);
-        };
+        Runnable cars = () -> spawnCars(carSpawner);
         Thread car = new Thread(cars);
         car.start();
 
-        Runnable trains = () -> {
-            spawnTrain(trainSpawner);
-        };
+        Runnable trains = () -> spawnTrain(trainSpawner);
         Thread train = new Thread(trains);
         train.start();
     }
@@ -64,7 +64,8 @@ public class MapViewController {
             };
             Thread t = new Thread(r);
             t.start();
-            try {
+            try
+            {
                 Thread.sleep(3000);
             } catch (InterruptedException e) {
                 e.printStackTrace();
@@ -74,6 +75,18 @@ public class MapViewController {
 
     private void spawnTrain(TrainSpawner trainSpawner)
     {
+        while(true) {
+            Train train = trainSpawner.spawnTrain();
+            TrainDriver trainDriver = new TrainDriver(train);
+            Platform.runLater(()->rootPane.getChildren().add(train.getImageView()));
+            trainDriver.drive();
+            try
+            {
+                Thread.sleep(30000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
 
     }
 

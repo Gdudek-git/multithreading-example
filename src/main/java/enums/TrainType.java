@@ -1,7 +1,7 @@
 package enums;
 
 public enum TrainType {
-    MULTIPLE_UNIT("/images/train/MultipleUnitTrain.png");
+    SINGLE_UNIT("/images/train/SingleUnitTrain.png");
 
     public String imagePath;
 
