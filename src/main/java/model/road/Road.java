@@ -6,7 +6,7 @@ public abstract class Road {
 
     protected double mapX;
     protected double mapY;
-    protected double vehicleRotation;
+    protected double requiredVehicleRotation;
     protected ArrayList<Waypoint> route;
 
 
@@ -17,8 +17,8 @@ public abstract class Road {
         {
             mapX+=newMapX;
             mapY+=newMapY;
-            vehicleRotation+=newVehicleRotation;
-            carRoute.add(new Waypoint(mapX,mapY,vehicleRotation,vehicleShouldRotate));
+            requiredVehicleRotation +=newVehicleRotation;
+            carRoute.add(new Waypoint(mapX,mapY, requiredVehicleRotation,vehicleShouldRotate));
         }
     }
 

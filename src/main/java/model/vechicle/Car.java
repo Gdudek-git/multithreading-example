@@ -11,7 +11,7 @@ import java.util.ArrayList;
 public class Car extends Vehicle{
 
     private CarType carType;
-    public ArrayList<Waypoint> carRoute;
+    public ArrayList<Waypoint> route;
 
     public Car(boolean isDrivingLeftToRight, CarType carType)
     {
@@ -20,15 +20,7 @@ public class Car extends Vehicle{
         this.carType =carType;
     }
 
-    public void setCarRoute(ArrayList<Waypoint>carRoute)
-    {
-        this.carRoute = carRoute;
-    }
 
-    public ArrayList<Waypoint> getCarRoute()
-    {
-        return carRoute;
-    }
 
     public boolean getIsDrivingLeftToRight()
     {

@@ -29,12 +29,12 @@ public class CarSpawner {
 
     private Car createCar()
     {
-        Car car = new Car(GetRandomVehicleDirection.getIsLeftToRight(), GetRandomCarType.getRandomCarType(CarType.class));
+        Car car = new Car(GetRandomVehicleDirection.getIsLeftToRight(), GetRandomVehicleType.getRandomVehicleType(CarType.class));
         car.setImageView();
         car.setImageViewSize();
         SetNodeOrientation.setNodeOrientation(car.getIsDrivingLeftToRight(),car.getImageView());
-        car.setSpeed(GetRandomSpeed.getCarSpeed());
-        car.setCarRoute(GetCarRoute.getCarRoute(car));
+        car.setSpeed(GetRandomVehicleSpeed.getCarSpeed());
+        car.setRoute(GetCarRoute.getCarRoute(car));
         return car;
     }
 
