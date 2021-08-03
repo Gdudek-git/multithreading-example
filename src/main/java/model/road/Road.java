@@ -10,6 +10,10 @@ public abstract class Road {
     protected ArrayList<Waypoint> route;
 
 
+    public ArrayList<Waypoint> getRoute()
+    {
+        return route;
+    }
 
     protected void mapTheRoadCurve(double newMapX,double newMapY,double newVehicleRotation,boolean vehicleShouldRotate,ArrayList<Waypoint>carRoute)
     {

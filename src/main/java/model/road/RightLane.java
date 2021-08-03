@@ -15,10 +15,7 @@ public final class RightLane extends Road {
         return rightLane;
     }
 
-    public ArrayList<Waypoint> getCarRoute()
-    {
-        return route;
-    }
+
 
     private RightLane()
     {
