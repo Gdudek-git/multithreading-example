@@ -13,8 +13,8 @@ public class GetCarRoute {
     {
         if(car.getIsDrivingLeftToRight())
         {
-            return RightLane.getRightLane().getCarRoute();
+            return RightLane.getRightLane().getRoute();
         }
-        return LeftLane.getLeftLane().getCarRoute();
+        return LeftLane.getLeftLane().getRoute();
     }
 }
