@@ -2,7 +2,7 @@ package utils;
 
 import java.util.concurrent.ThreadLocalRandom;
 
-public class GetRandomSpeed {
+public class GetRandomVehicleSpeed {
 
     public synchronized static int getCarSpeed()
     {
