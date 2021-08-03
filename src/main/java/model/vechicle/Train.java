@@ -8,9 +8,10 @@ public class Train extends Vehicle {
 
     private TrainType trainType;
 
-    public Train(TrainType trainType)
+    public Train(boolean isDrivingLeftToRight,TrainType trainType)
     {
         imageView = new ImageView();
+        this.isDrivingLeftToRight=isDrivingLeftToRight;
         this.trainType = trainType;
     }
 

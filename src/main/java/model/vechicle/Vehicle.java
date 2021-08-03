@@ -14,6 +14,11 @@ public abstract class Vehicle {
     protected boolean isDrivingLeftToRight;
 
 
+    public boolean getIsDrivingLeftToRight()
+    {
+        return isDrivingLeftToRight;
+    }
+
     public int getSpeed()
     {
         return speed;

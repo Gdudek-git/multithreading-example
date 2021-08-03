@@ -20,13 +20,6 @@ public class Car extends Vehicle{
         this.carType =carType;
     }
 
-
-
-    public boolean getIsDrivingLeftToRight()
-    {
-        return isDrivingLeftToRight;
-    }
-
     @Override
     public void setImageView()
     {
