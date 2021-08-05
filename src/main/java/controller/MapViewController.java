@@ -78,7 +78,7 @@ public class MapViewController {
         while(true) {
             Train train = trainSpawner.spawnTrain();
             TrainDriver trainDriver = new TrainDriver(train);
-            Platform.runLater(()->rootPane.getChildren().add(train.getImageView()));
+            Platform.runLater(()->topPane.getChildren().add(train.getImageView()));
             trainDriver.drive();
             try
             {
