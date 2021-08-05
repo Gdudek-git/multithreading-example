@@ -11,15 +11,18 @@ import utils.SetNodeOrientation;
 public class CarDriver extends Driver {
 
     private CarDisplayManager carDisplayManager;
+    private Driver.VehiclesSynchronization vehiclesSynchronization;
 
     public CarDriver(Vehicle vehicle,CarDisplayManager carDisplayManager)
     {
         this.vehicle=vehicle;
         this.carDisplayManager = carDisplayManager;
+        vehiclesSynchronization = this.new VehiclesSynchronization();
     }
 
     public void drive()
     {
+        int waypointIndex = 0;
         for(Waypoint waypoint: vehicle.getRoute())
         {
             Platform.runLater(() ->
@@ -31,10 +34,21 @@ public class CarDriver extends Driver {
 
             changeNodeOrientation(waypoint);
             carDisplayManager.ensureCarImageIsInCorrectAnchorPane((Car)vehicle,waypoint);
+
+            vehiclesSynchronization.setVehicleDrivesThroughWaypoint(waypointIndex,vehicle.getRoute());
+            if(waypointIndex+30<vehicle.getRoute().size())
+            {
+                vehiclesSynchronization.checkIfTherIsAnotherVehicleInFrontOf(waypointIndex + 30, vehicle.getRoute());
+            }
             super.simulateSpeed();
+            vehiclesSynchronization.setVehicleDroveThroughWaypoint(waypointIndex,vehicle.getRoute());
+            waypointIndex++;
         }
 
     }
+
+
+
 
     private void changeNodeOrientation(Waypoint waypoint)
     {

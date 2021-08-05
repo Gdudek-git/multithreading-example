@@ -1,8 +1,9 @@
 package model.drivers;
 
-
+import model.road.Waypoint;
 import model.vechicle.Vehicle;
 
+import java.util.ArrayList;
 
 
 public abstract class Driver {
@@ -19,6 +20,33 @@ public abstract class Driver {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+    }
+
+    protected class VehiclesSynchronization
+    {
+        protected void setVehicleDrivesThroughWaypoint(int waypointIndex,ArrayList<Waypoint>route)
+        {
+            route.get(waypointIndex).setWaypointIsOccupied();
+        }
+
+        protected void setVehicleDroveThroughWaypoint(int waypointIndex,ArrayList<Waypoint>route)
+        {
+            route.get(waypointIndex).setWaypointIsNotOccupied();
+        }
+
+        protected void checkIfTherIsAnotherVehicleInFrontOf(int waypointIndex, ArrayList<Waypoint>route)
+        {
+            while(route.get(waypointIndex).getOccupied())
+            {
+                try {
+                    Thread.sleep(1);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+
+
 
     }
 
