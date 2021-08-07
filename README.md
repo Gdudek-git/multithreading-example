@@ -1,5 +1,5 @@
 ## General info
-Simple project that shows example of using threads.
+Simple application that uses multiple threads.
 	
 ## Technologies
 Project is created with:
