@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MapViewController">
+    <children>
+        <ImageView fx:id="mapImageView" fitHeight="800.0" fitWidth="1200.0" pickOnBounds="true" preserveRatio="false">
+            <image>
+                <Image url="@../images/map/Map.png" />
+            </image></ImageView>
+        <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="862.0" layoutY="301.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../images/level_crossing/barriers/BarrierBase.png" />
+            </image>
+        </ImageView>
+        <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="869.0" layoutY="207.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../images/level_crossing/barriers/BarrierBase.png" />
+            </image>
+        </ImageView>
+        <ImageView fx:id="topBarrier" fitHeight="190.0" fitWidth="160.0" layoutX="975.0" layoutY="140.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../images/level_crossing/barriers/Barrier.png" />
+            </image>
+        </ImageView>
+        <AnchorPane fx:id="bottomPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+            <children>
+            </children>
+        </AnchorPane>
+        <AnchorPane fx:id="topPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+            <children>
+            </children>
+        </AnchorPane>
+        <ImageView fx:id="elementsAlwaysOnTopImageView" fitHeight="800.0" fitWidth="1200.0" pickOnBounds="true" preserveRatio="false">
+            <image>
+                <Image url="@../images/map/ElementsAlwaysOnTop.png" />
+            </image></ImageView>
+        <ImageView fx:id="bottomBarrier" fitHeight="190.0" fitWidth="160.0" layoutX="968.0" layoutY="233.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../images/level_crossing/barriers/Barrier.png" />
+            </image>
+        </ImageView>
+        <ImageView fx:id="barrierLights" fitHeight="179.0" fitWidth="250.0" layoutX="666.0" layoutY="248.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../images/level_crossing/lights/GreenLights.png" />
+            </image>
+        </ImageView>
+    </children>
+</AnchorPane>
