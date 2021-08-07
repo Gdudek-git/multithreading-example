@@ -38,7 +38,7 @@ public class CarDriver extends Driver {
             vehiclesSynchronization.setVehicleDrivesThroughWaypoint(waypointIndex,vehicle.getRoute());
             if(waypointIndex+30<vehicle.getRoute().size())
             {
-                vehiclesSynchronization.checkIfTherIsAnotherVehicleInFrontOf(waypointIndex + 30, vehicle.getRoute());
+                vehiclesSynchronization.checkIfThereIsAnotherVehicleInFrontOf(waypointIndex + 30, vehicle.getRoute());
             }
             super.simulateSpeed();
             vehiclesSynchronization.setVehicleDroveThroughWaypoint(waypointIndex,vehicle.getRoute());

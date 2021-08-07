@@ -34,7 +34,7 @@ public abstract class Driver {
             route.get(waypointIndex).setWaypointIsNotOccupied();
         }
 
-        protected void checkIfTherIsAnotherVehicleInFrontOf(int waypointIndex, ArrayList<Waypoint>route)
+        protected void checkIfThereIsAnotherVehicleInFrontOf(int waypointIndex, ArrayList<Waypoint>route)
         {
             while(route.get(waypointIndex).getOccupied())
             {
