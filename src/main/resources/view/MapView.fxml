@@ -20,9 +20,9 @@
                 <Image url="@../images/level_crossing/barriers/BarrierBase.png" />
             </image>
         </ImageView>
-        <ImageView fx:id="topBarrier" fitHeight="190.0" fitWidth="160.0" layoutX="973.0" layoutY="146.0" pickOnBounds="true" preserveRatio="true">
+        <ImageView fx:id="topBarrier" fitHeight="190.0" fitWidth="160.0" layoutX="975.0" layoutY="140.0" pickOnBounds="true" preserveRatio="true">
             <image>
-                <Image url="@../images/level_crossing/barriers/Barrier6.png" />
+                <Image url="@../images/level_crossing/barriers/Barrier.png" />
             </image>
         </ImageView>
         <AnchorPane fx:id="bottomPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
@@ -37,9 +37,9 @@
             <image>
                 <Image url="@../images/map/ElementsAlwaysOnTop.png" />
             </image></ImageView>
-        <ImageView fx:id="bottomBarrier" fitHeight="190.0" fitWidth="160.0" layoutX="968.0" layoutY="238.0" pickOnBounds="true" preserveRatio="true">
+        <ImageView fx:id="bottomBarrier" fitHeight="190.0" fitWidth="160.0" layoutX="968.0" layoutY="233.0" pickOnBounds="true" preserveRatio="true">
             <image>
-                <Image url="@../images/level_crossing/barriers/Barrier6.png" />
+                <Image url="@../images/level_crossing/barriers/Barrier.png" />
             </image>
         </ImageView>
         <ImageView fx:id="barrierLights" fitHeight="179.0" fitWidth="250.0" layoutX="666.0" layoutY="248.0" pickOnBounds="true" preserveRatio="true">
